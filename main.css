@@ -9,6 +9,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
 }
 
 .header__logo {
@@ -45,6 +49,11 @@ button {
 .about__sun-image {
     width: 100px;
     height: 100px;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: absolute;
 }
 
 .about {
@@ -129,6 +138,7 @@ button {
     padding: 0px 20px 0px 20px;
     border-radius: 15px;
     border: none;
+    outline: none;
 }
 
 .form select {
@@ -138,6 +148,7 @@ button {
     padding: 0px 20px 0px 20px;
     border-radius: 15px;
     border: none;
+    outline: none;
 }
 
 .form__submit {
@@ -197,3 +208,137 @@ button:hover {
 .footer__links a {
     margin-bottom: 15px;
 }
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1024px) {
+    
+    .about__sun-image {
+
+        width: 75px;
+        height: 75px;
+
+    }
+
+    .about__image {
+
+        width: 280px;
+
+    }
+
+    .about h1 {
+
+        font-size: 36px;
+        line-height: 40px;
+
+    }
+
+    header {
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    .about {
+
+        padding: 115px 20px;
+
+    }
+
+    .form {
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    .footer {
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+}
+
+@media (max-width: 720px) {
+    
+    .header__logo {
+    
+        height: 20px;
+    
+    }
+
+    .about__sun-image {
+
+        height: 75px;
+        width: 75px;
+
+    }
+
+    .about__image {
+
+        width: 280px;
+
+    }
+
+    .about h1 {
+
+        font-size: 36px;
+        line-height: 40px;
+
+    }
+
+    .form h1 {
+
+        font-size: 36px;
+        line-height: 40px;
+
+    }
+
+    header {
+
+        padding: 10px;
+
+    }
+
+    .about {
+
+        padding: 50px 10px;
+        flex-direction: column-reverse;
+
+    }
+
+    .form {
+
+        padding: 50px 10px;
+
+    }
+
+    .footer {
+
+        padding: 50px 10px;
+
+    }
+
+    header a {
+
+        margin-right: 10px;
+
+    }
+
+    .footer__container {
+
+        flex-direction: column;
+
+    }
+}
+
